@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Camera Preview -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Overlay for boxes -->
+    <com.example.dddapp.OverlayView
+        android:id="@+id/overlayView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Status Text -->
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="INITIALIZING"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:padding="10dp"
+        android:layout_gravity="top|center_horizontal"
+        android:background="#8800FF00"
+        android:layout_marginTop="70dp" />
+
+    <!-- Bottom Controls -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="20dp">
+
+        <Button
+            android:id="@+id/pauseBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="PAUSE"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#6A0DAD"
+            android:layout_marginEnd="10dp"/>
+
+        <Button
+            android:id="@+id/exitBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="EXIT"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#6A0DAD"
+            android:layout_marginStart="10dp"/>
+
+    </LinearLayout>
+
+</FrameLayout>
